@@ -41,13 +41,14 @@ input = sys.stdin.readline
 dx = [1, -1, 0, 0]
 dy = [0, 0, 1, -1]
 
+
 def dfs(x, y):
     if x == m-1 and y == n-1:
         return 1
     if c[x][y] != -1:
         return c[x][y]
     c[x][y] = 0
-    
+
     for i in range(4):
         nx = x + dx[i]
         ny = y + dy[i]
