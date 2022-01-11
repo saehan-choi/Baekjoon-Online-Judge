@@ -7,15 +7,11 @@ right_Heap= []
 
 for i in range(n):
     x = int(sys.stdin.readline())
-
-    if i == 0:
-        left_Heap.append(x)
-
-    elif x > left_Heap[0]:
-        heapq.heappush(right_Heap, x)
-
-    elif x <= left_Heap[0]:
-        heapq.heappush(left_Heap, x)
+    heapq.heappush(left_Heap, x)
 
     print(left_Heap)
-    print(right_Heap)
+    # print(right_Heap)
+
+    # heap 자료구조 해당 index * 2 + 1 자식노드의 왼쪽
+    # heap 자료구조 해당 index * 2 + 2 자식노드의 오른쪽
+    # 0일때도 *2 적용
