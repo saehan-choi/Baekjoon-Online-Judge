@@ -7,18 +7,14 @@
 
 # N(1 ≤ N ≤ 1,000,000)
 
-N = input()
+N = int(input())
+result = 0
+for value in range(1,N+1):    
+    listN = list(map(int, str(value)))
+    decompositionSum= value+sum(listN)
 
-
-for i in range(1,int(N)):    
-    listN = list(map(int, str(i)))
-    decompositionSum= i+sum(listN)
-
-    if decompositionSum == int(N):
-        generator = i
+    if decompositionSum == N:
+        result = value
         break
-    
-    else:
-        generator = 0
 
-print(generator)
+print(result)
